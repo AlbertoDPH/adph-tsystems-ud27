@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.delpozo.dto.Proveedor;
-import com.delpozo.service.ProveedorServiceImp;
+import com.delpozo.service.ProveedorServiceImpl;
  
 
 @RestController
@@ -21,7 +21,7 @@ import com.delpozo.service.ProveedorServiceImp;
 public class ProveedorController {
 
 	@Autowired
-	ProveedorServiceImp proveedorServiceImp;
+	ProveedorServiceImpl proveedorServiceImp;
 
 	@GetMapping("/proveedores")
 	public List<Proveedor> listarProveedors() {

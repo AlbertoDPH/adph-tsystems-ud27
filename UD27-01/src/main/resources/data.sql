@@ -5,6 +5,7 @@
 DROP table IF EXISTS suministra;
 DROP table IF EXISTS piezas;
 DROP table IF EXISTS proveedores;
+DROP table IF EXISTS usuario;
 
 /*Creamos la primera tabla que no tiene ninguna clave foránea*/
 CREATE TABLE proveedores(
@@ -33,6 +34,14 @@ CONSTRAINT suministra_fk1 foreign key(id_pieza) references piezas(id) on delete 
 CONSTRAINT suministra_fk2 foreign key(id_proveedor) references proveedores(id) on delete cascade on update cascade
 );
 
+CREATE TABLE usuario (
+    id INT auto_increment,
+    username nvarchar(100) UNIQUE,
+    password nvarchar(255),
+    role nvarchar(50),
+    primary key (id)
+);
+
 -- registros tabla proveedores
 INSERT INTO proveedores (nombre) VALUES ('Proveedor 1');
 INSERT INTO proveedores (nombre) VALUES ('Proveedor 2');
@@ -49,7 +58,8 @@ INSERT INTO suministra (id_pieza, id_proveedor, precio) VALUES (3, 2, 10);
 INSERT INTO suministra (id_pieza, id_proveedor, precio) VALUES (2, 3, 8);
 INSERT INTO suministra (id_pieza, id_proveedor, precio) VALUES (3, 1, 5);
 
+INSERT INTO Usuario (username, password, role) VALUES
+('admin', '$2a$12$9ZtlxtT/DcVXrTEP7CD5G.iQEB1zB5Xza32IWpQZNS4NJ8KvVqhCi', 'admin'),
+('alberto', '$2a$12$xP79bu.7SwdkeyYHi4kvMOpP9umurJ0DN7c4WbZ1csqXToPs6oG9K', 'user');
 
--- INSERT INTO Usuario (username, password, role) VALUES 
--- ('admin', '1234','admin'),
--- ('alberto', '1234','user');
+

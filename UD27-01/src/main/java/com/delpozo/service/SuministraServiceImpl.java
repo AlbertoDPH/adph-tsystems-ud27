@@ -12,7 +12,7 @@ import com.delpozo.dto.Suministra;
 
 
 @Service
-public class SuministraServiceImp implements ISuministraService {
+public class SuministraServiceImpl implements ISuministraService {
 
 	@Autowired
 	ISuministraDAO iSuministraDAO;

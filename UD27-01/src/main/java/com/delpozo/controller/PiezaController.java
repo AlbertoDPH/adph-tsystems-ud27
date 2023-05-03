@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.delpozo.dto.Pieza;
-import com.delpozo.service.PiezaServiceImp;
+import com.delpozo.service.PiezaServiceImpl;
 
 @RestController
 @RequestMapping("/api")
 public class PiezaController {
 
 	@Autowired
-	PiezaServiceImp piezaServiceImp;
+	PiezaServiceImpl piezaServiceImp;
 
 	@GetMapping("/piezas")
 	public List<Pieza> listarPiezas() {

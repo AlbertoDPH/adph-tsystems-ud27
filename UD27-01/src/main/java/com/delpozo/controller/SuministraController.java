@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.delpozo.dto.Suministra;
-import com.delpozo.service.SuministraServiceImp;
+import com.delpozo.service.SuministraServiceImpl;
 
 
 @RestController
@@ -20,7 +20,7 @@ import com.delpozo.service.SuministraServiceImp;
 public class SuministraController {
 
 	@Autowired
-	SuministraServiceImp suministraServiceImp;
+	SuministraServiceImpl suministraServiceImp;
 
 	@GetMapping("/suministra")
 	public List<Suministra> listarSuministras() {

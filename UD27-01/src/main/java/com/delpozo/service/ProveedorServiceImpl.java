@@ -11,7 +11,7 @@ import com.delpozo.dto.Proveedor;
 
 
 @Service
-public class ProveedorServiceImp implements IProveedorService {
+public class ProveedorServiceImpl implements IProveedorService {
 
 	@Autowired
 	IProveedorDAO iProveedorDAO;

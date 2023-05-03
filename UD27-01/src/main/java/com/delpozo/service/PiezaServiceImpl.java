@@ -9,7 +9,7 @@ import com.delpozo.dao.IPiezaDAO;
 import com.delpozo.dto.Pieza;
 
 @Service
-public class PiezaServiceImp implements IPiezaService {
+public class PiezaServiceImpl implements IPiezaService {
 
 	@Autowired
 	IPiezaDAO iPiezaDAO;
